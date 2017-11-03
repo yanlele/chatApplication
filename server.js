@@ -2,6 +2,7 @@ var http=require('http')
 var fs=require('fs')
 var path=require('path')
 var mime=require('mime')
+var chatServer=require('./lib/chatSrver')
 
 var cache={};
 
@@ -55,3 +56,5 @@ var server=http.createServer(function(request,response){
 server.listen(3002,function(){
     console.log('server listening on 3002')
 });
+
+chatServer.listen(server);
