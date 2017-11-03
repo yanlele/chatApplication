@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>yanlele-聊天室</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<div id='content'>
+    <div id='room'></div>
+    <div id='room-list'></div>
+    <div id='messages'></div>
+
+    <form id='send-form'>
+        <input id='send-message' />
+        <input id='send-button' type='submit' value='Send'/>
+
+        <div id='help'>
+            指令命令行，按着下面的提示输入:
+            <ul>
+                <li>改变你的昵称: <code>/nick [你的昵称]</code></li>
+                <li>你想要加入的房间或者你想要创建的房间: <code>/join [房间名称]</code></li>
+            </ul>
+        </div>
+    </form>
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/chat.js"></script>
+<script src="./js/chatUI.js"></script>
+
+</body>
+</html>
